@@ -194,15 +194,16 @@ def clean_dir():
 if __name__ == "__main__":
     
     
-    if len(sys.argv[1]) > 7: # given ekstra kwd
+    solvent = None
 
+    if len(sys.argv[1]) > 7: # given ekstra kwd
         for i, kwd in enumerate(sys.argv):
             if kwd == "R":
                 break
              
             if "gbsa" or "alpb" in kwd:
                 solvent = kwd
-
+        
         ifile=sys.argv[i+1]    
         ofile=sys.argv[i+2]
     
